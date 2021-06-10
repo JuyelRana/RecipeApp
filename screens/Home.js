@@ -16,9 +16,8 @@ const Home = ({ navigation }) => {
         >
             <Text>Home</Text>
             <TouchableOpacity
-                onPress={() => navigation.navigate("Recipe")}
-            >
-                <Text>Navigate to Recipe</Text>
+                onPress={() => navigation.navigate("Recipe")}>
+                <Text>Navigate to Recipe Recipe</Text>
             </TouchableOpacity>
         </View>
     )
