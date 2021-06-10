@@ -7,6 +7,7 @@ const laksa = require("../assets/images/recipes/laksa.png")
 const nasiLemak = require("../assets/images/recipes/nasi-lemak.webp")
 
 const profile = require("../assets/images/dummy_profiles/profile.png")
+const juyel = require("../assets/images/dummy_profiles/juyel.jpg")
 const UserProfile1 = require("../assets/images/dummy_profiles/profile-pic-1.png")
 const UserProfile2 = require("../assets/images/dummy_profiles/profile-pic-2.png")
 const UserProfile3 = require("../assets/images/dummy_profiles/profile-pic-3.png")
@@ -21,6 +22,7 @@ const UserProfile10 = require("../assets/images/dummy_profiles/profile-pic-10.pn
 export default {
     loginBackground,
     profile,
+    juyel,
     recipe,
     spagetti,
     satay,
