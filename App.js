@@ -1,7 +1,7 @@
 import React from 'react';
-import { Login, Recipe } from "./screens";
-import { createStackNavigator } from "@react-navigation/stack";
-import { NavigationContainer } from '@react-navigation/native';
+import {Login, Recipe} from "./screens";
+import {createStackNavigator} from "@react-navigation/stack";
+import {NavigationContainer} from '@react-navigation/native';
 
 import Tabs from "./navigation/tabs";
 

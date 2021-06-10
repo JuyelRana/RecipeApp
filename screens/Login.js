@@ -1,25 +1,24 @@
 import React from 'react';
-import {
-    View,
-    Text,
-    TouchableOpacity
-} from 'react-native';
+import {StatusBar, View} from 'react-native';
+import {COLORS} from "../constants";
+import {Details, LoginHeader} from "../components/Login";
 
-const Login = ({ navigation }) => {
+const Login = ({navigation}) => {
     return (
-        <View
-            style={{
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}
-        >
-            <Text>Login</Text>
-            <TouchableOpacity
-                onPress={() => navigation.replace("Home")}
-            >
-                <Text>Navigate to Home</Text>
-            </TouchableOpacity>
+        <View style={{
+            flex: 1,
+            backgroundColor: COLORS.black
+        }}>
+
+            <StatusBar barStyle={'light-content'}/>
+
+
+            {/*LoginHeader */}
+            <LoginHeader/>
+
+            {/*Details */}
+            <Details navigation={navigation}/>
+
         </View>
     )
 }
