@@ -18,29 +18,6 @@ const Recipe = ({navigation, route}) => {
     }, []);
 
 
-    const renderRecipeCardHeader = () => {
-        return (
-            <View style={{
-                alignItems: 'center',
-                overflow: 'hidden'
-            }}>
-                {/*Background Image*/}
-                <Animated.Image
-                    style={{
-                        height: HEADER_HEIGHT,
-                        width: "200%",
-
-
-                    }}
-                    resizeMode='contain'
-                    source={selectedRecipe?.image}/>
-
-                {/*Recipe Creator Card */}
-            </View>
-        )
-    }
-
-
     return (
         <View
             style={{
