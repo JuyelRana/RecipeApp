@@ -1,19 +1,34 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
     View,
     Text,
-    TouchableOpacity, SafeAreaView, FlatList
+    TouchableOpacity,
+    SafeAreaView,
+    FlatList,
+    StatusBar, Platform
 } from 'react-native';
 import {COLORS, dummyData, SIZES} from "../constants";
 import {CategoryCard, HomeHeader, SearchBar} from "../components/Home";
+import {hideNavigationBar} from "react-native-navigation-bar-color";
 
 const Home = ({navigation}) => {
+
+    useEffect(() => {
+        (Platform.OS === "android") && hideNavigationBar();
+    }, []);
+
     return (
         <SafeAreaView
             style={{
                 flex: 1,
                 backgroundColor: COLORS.white
             }}>
+
+            {
+                (Platform.OS === "ios") ? (<StatusBar barStyle={'light-content'}/>) : (
+                    <StatusBar translucent backgroundColor='transparent'/>)
+            }
+
 
             <FlatList
                 data={dummyData.categories}

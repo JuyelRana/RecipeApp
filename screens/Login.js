@@ -8,7 +8,7 @@ const Login = ({navigation}) => {
 
     useEffect(() => {
         (Platform.OS === "android") && hideNavigationBar();
-    }, [])
+    }, []);
 
     return (
         <View style={{

@@ -26,6 +26,7 @@ const SearchBar = () => {
                 placeholderTextColor={COLORS.gray}
                 placeholder="Search Recipes"
                 style={{
+                    flex: 1,
                     marginLeft: SIZES.radius,
                     ...FONTS.body3
                 }}
