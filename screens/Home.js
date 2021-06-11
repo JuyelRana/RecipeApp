@@ -5,7 +5,7 @@ import {
     TouchableOpacity, SafeAreaView, FlatList
 } from 'react-native';
 import {COLORS, dummyData, SIZES} from "../constants";
-import {CategoryCard, HomeHeader} from "../components/Home";
+import {CategoryCard, HomeHeader, SearchBar} from "../components/Home";
 
 const Home = ({navigation}) => {
     return (
@@ -25,6 +25,7 @@ const Home = ({navigation}) => {
                         {/*Header*/}
                         <HomeHeader/>
                         {/*Search Bar*/}
+                        <SearchBar/>
                         {/*See Recipe Card*/}
                         {/*Trending Section*/}
                         {/*Category Header*/}
