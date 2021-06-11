@@ -4,7 +4,7 @@ import {
     Text, Animated
 } from 'react-native';
 import {COLORS} from "../constants";
-import {Ingredients, RecipeCardHeader} from "../components/Recipe";
+import {HeaderBar, Ingredients, RecipeCardHeader} from "../components/Recipe";
 
 const Recipe = ({navigation, route}) => {
 
@@ -49,6 +49,12 @@ const Recipe = ({navigation, route}) => {
 
                 renderItem={({item}) => (<Ingredients item={item}/>)}
             />
+
+            {/*Header Bar */}
+            <HeaderBar
+                scrollY={scrollY}
+                navigation={navigation}
+                selectedRecipe={selectedRecipe}/>
 
         </View>
     )
