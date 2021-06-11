@@ -1,8 +1,10 @@
 import React from 'react';
 import {Animated, View} from "react-native";
 import {SIZES} from "../../constants";
+import {RecipeCreatorCardInfo} from "./index";
 
 const RecipeCardHeader = ({selectedRecipe, scrollY}) => {
+
     return (
         <View style={{
             marginTop: -1000,
@@ -34,6 +36,18 @@ const RecipeCardHeader = ({selectedRecipe, scrollY}) => {
                 source={selectedRecipe?.image}/>
 
             {/*Recipe Creator Card */}
+            <Animated.View style={{
+                position: 'absolute',
+                bottom: 10,
+                left: 30,
+                right: 30,
+                height: 80
+            }}>
+
+                <RecipeCreatorCardInfo selectedRecipe={selectedRecipe}/>
+
+            </Animated.View>
+
         </View>
     );
 };
