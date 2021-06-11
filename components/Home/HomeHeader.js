@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity, View, Image} from "react-native";
+import {Image, Text, TouchableOpacity, View} from "react-native";
 import {COLORS, FONTS, images, SIZES} from "../../constants";
 
 const HomeHeader = () => {
@@ -18,7 +18,7 @@ const HomeHeader = () => {
                     color: COLORS.darkGreen,
                     ...FONTS.h2
                 }}>
-                    Hello Juyel Rana,
+                    Hello Eng. Juyel Rana,
                 </Text>
 
                 <Text style={{
