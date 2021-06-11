@@ -1,11 +1,10 @@
 import React from 'react';
-import {Text, TouchableOpacity, View, Image, Platform} from "react-native";
+import {Image, Text, TouchableOpacity, View} from "react-native";
 import {COLORS, FONTS, images, SIZES} from "../../constants";
 
 const HomeHeader = () => {
     return (
         <View style={{
-            marginTop: Platform.OS === "android" ? 15 : 0,
             flexDirection: 'row',
             marginHorizontal: SIZES.padding,
             alignItems: 'center',

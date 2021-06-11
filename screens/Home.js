@@ -1,14 +1,7 @@
 import React, {useEffect} from 'react';
-import {
-    View,
-    Text,
-    TouchableOpacity,
-    SafeAreaView,
-    FlatList,
-    StatusBar, Platform
-} from 'react-native';
+import {FlatList, Platform, SafeAreaView, StatusBar, View} from 'react-native';
 import {COLORS, dummyData, SIZES} from "../constants";
-import {CategoryCard, HomeHeader, SearchBar} from "../components/Home";
+import {CategoryCard, CategoryHeader, HomeHeader, SearchBar, SeeRecipes, TrendingSection} from "../components/Home";
 import {hideNavigationBar} from "react-native-navigation-bar-color";
 
 const Home = ({navigation}) => {
@@ -36,14 +29,19 @@ const Home = ({navigation}) => {
                 keyboardDismissMode="on-drag"
                 showsVerticalScrollIndicator={false}
                 ListHeaderComponent={
-                    <View>
+                    <View style={{
+                        marginTop: Platform.OS === "android" ? 15 : 0,
+                    }}>
                         {/*Header*/}
                         <HomeHeader/>
                         {/*Search Bar*/}
                         <SearchBar/>
                         {/*See Recipe Card*/}
+                        <SeeRecipes/>
                         {/*Trending Section*/}
+                        <TrendingSection navigation={navigation}/>
                         {/*Category Header*/}
+                        <CategoryHeader/>
                     </View>
                 }
                 renderItem={({item}) => (
