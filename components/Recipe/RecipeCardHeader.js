@@ -4,6 +4,8 @@ import {Text, View, Image, Animated} from "react-native";
 const RecipeCardHeader = ({selectedRecipe, scrollY, HEADER_HEIGHT}) => {
     return (
         <View style={{
+            marginTop: -1000,
+            paddingTop:1000,
             alignItems: 'center',
             overflow: 'hidden'
         }}>
