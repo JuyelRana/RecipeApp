@@ -19,7 +19,7 @@ const HomeHeader = () => {
                     color: COLORS.darkGreen,
                     ...FONTS.h2
                 }}>
-                    Hello Juyel Rana,
+                    Hello Eng. Juyel Rana,
                 </Text>
 
                 <Text style={{
