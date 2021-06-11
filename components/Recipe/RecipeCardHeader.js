@@ -41,7 +41,16 @@ const RecipeCardHeader = ({selectedRecipe, scrollY}) => {
                 bottom: 10,
                 left: 30,
                 right: 30,
-                height: 80
+                height: 80,
+                transform:[
+                    {
+                        translateY:scrollY.interpolate({
+                            inputRange:[0,170,250],
+                            outputRange:[0,0,100],
+                            extrapolate: 'clamp'
+                        })
+                    }
+                ]
             }}>
 
                 <RecipeCreatorCardInfo selectedRecipe={selectedRecipe}/>
