@@ -1,29 +1,30 @@
 import React from 'react';
-import {Text, View, Image, Animated} from "react-native";
+import {Animated, View} from "react-native";
+import {SIZES} from "../../constants";
 
-const RecipeCardHeader = ({selectedRecipe, scrollY, HEADER_HEIGHT}) => {
+const RecipeCardHeader = ({selectedRecipe, scrollY}) => {
     return (
         <View style={{
             marginTop: -1000,
-            paddingTop:1000,
+            paddingTop: 1000,
             alignItems: 'center',
             overflow: 'hidden'
         }}>
             {/*Background Image*/}
             <Animated.Image
                 style={{
-                    height: HEADER_HEIGHT,
+                    height: SIZES.width,
                     width: "200%",
                     transform: [
                         {
                             translateY: scrollY.interpolate({
-                                inputRange: [-HEADER_HEIGHT, 0, HEADER_HEIGHT],
-                                outputRange: [-HEADER_HEIGHT / 2, 0, HEADER_HEIGHT * 0.75]
+                                inputRange: [-SIZES.width, 0, SIZES.width],
+                                outputRange: [-SIZES.width / 2, 0, SIZES.width * 0.75]
                             })
                         },
                         {
                             scale: scrollY.interpolate({
-                                inputRange: [-HEADER_HEIGHT, 0, HEADER_HEIGHT],
+                                inputRange: [-SIZES.width, 0, SIZES.width],
                                 outputRange: [2, 1, 0.75]
                             })
                         }

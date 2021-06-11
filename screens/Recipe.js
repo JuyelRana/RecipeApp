@@ -12,9 +12,6 @@ const Recipe = ({navigation, route}) => {
 
     const scrollY = useRef(new Animated.Value(0)).current;
 
-    const HEADER_HEIGHT = 350;
-
-
     useEffect(() => {
         let {recipe} = route.params;
         setSelectedRecipe(recipe);
@@ -60,7 +57,6 @@ const Recipe = ({navigation, route}) => {
                         {/*Header Section*/}
                         <RecipeCardHeader
                             scrollY={scrollY}
-                            HEADER_HEIGHT={HEADER_HEIGHT}
                             selectedRecipe={selectedRecipe}/>
 
                         {/*Info Section */}
