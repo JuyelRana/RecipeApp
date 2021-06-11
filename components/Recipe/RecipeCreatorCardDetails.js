@@ -22,7 +22,7 @@ const RecipeCreatorCardDetails = ({selectedRecipe}) => {
                         width: 40,
                         borderRadius: 20
                     }}
-                    source={selectedRecipe?.author.profilePic}/>
+                    source={selectedRecipe?.author?.profilePic}/>
             </View>
 
             {/*Lables*/}
