@@ -42,11 +42,11 @@ const RecipeCardHeader = ({selectedRecipe, scrollY}) => {
                 left: 30,
                 right: 30,
                 height: 80,
-                transform:[
+                transform: [
                     {
-                        translateY:scrollY.interpolate({
-                            inputRange:[0,170,250],
-                            outputRange:[0,0,100],
+                        translateY: scrollY.interpolate({
+                            inputRange: [0, 170, 250],
+                            outputRange: [0, 0, 100],
                             extrapolate: 'clamp'
                         })
                     }

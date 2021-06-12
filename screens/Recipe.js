@@ -4,7 +4,7 @@ import {
     Text, Animated
 } from 'react-native';
 import {COLORS} from "../constants";
-import {HeaderBar, Ingredients, RecipeCardHeader} from "../components/Recipe";
+import {HeaderBar, IngredientHeader, Ingredients, RecipeCardHeader, RecipeInfo} from "../components/Recipe";
 
 const Recipe = ({navigation, route}) => {
 
@@ -37,8 +37,10 @@ const Recipe = ({navigation, route}) => {
                             selectedRecipe={selectedRecipe}/>
 
                         {/*Info Section */}
+                        <RecipeInfo selectedRecipe={selectedRecipe}/>
 
                         {/*Ingredient Title Section*/}
+                        <IngredientHeader selectedRecipe={selectedRecipe}/>
 
                     </View>
                 }
@@ -48,6 +50,11 @@ const Recipe = ({navigation, route}) => {
                 ], {useNativeDriver: true})}
 
                 renderItem={({item}) => (<Ingredients item={item}/>)}
+                ListFooterComponent={
+                    <View style={{
+                        marginBottom: 100
+                    }}/>
+                }
             />
 
             {/*Header Bar */}

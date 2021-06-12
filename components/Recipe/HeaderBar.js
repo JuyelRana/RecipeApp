@@ -1,6 +1,6 @@
 import React from 'react';
-import {Image, TouchableOpacity, View, Animated} from "react-native";
-import {COLORS, icons, SIZES} from "../../constants";
+import {Image, TouchableOpacity, View, Animated, Text} from "react-native";
+import {COLORS, FONTS, icons, SIZES} from "../../constants";
 
 const HeaderBar = ({navigation, selectedRecipe, scrollY}) => {
     return (
@@ -28,6 +28,45 @@ const HeaderBar = ({navigation, selectedRecipe, scrollY}) => {
                     outputRange: [0, 1]
                 })
             }}/>
+
+            {/*Header Bar Title */}
+            <Animated.View style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+                paddingBottom: 10,
+                opacity: scrollY.interpolate({
+                    inputRange: [SIZES.width - 100, SIZES.width - 50],
+                    outputRange: [0, 1]
+                }),
+                transform: [
+                    {
+                        translateY: scrollY.interpolate({
+                            inputRange: [SIZES.width - 100, SIZES.width - 50],
+                            outputRange: [50, 0],
+                            extrapolate: 'clamp'
+                        })
+                    }
+                ]
+            }}>
+                <Text style={{
+                    color: COLORS.lightGray2,
+                    ...FONTS.body4
+                }}>
+                    Recipe By:
+                </Text>
+                <Text style={{
+                    color: COLORS.white,
+                    ...FONTS.h3
+                }}>
+                    {selectedRecipe?.author?.name}
+                </Text>
+
+            </Animated.View>
 
             <View style={{
                 flex: 1,
